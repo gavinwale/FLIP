@@ -1,4 +1,4 @@
-# FLIP
+# FLIP - Work in progress (smart contract coming soon...)
 
 An ERC-20 project with an optional burn mechanism implemented by the users themselves.
 
