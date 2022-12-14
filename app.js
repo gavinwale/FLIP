@@ -1,5 +1,5 @@
 const Web3 = require('web3');
-const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/3010d569218a4a7b9ca00fcfb8fde31e'));
+const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/APIKEY'));
 
 function flipCoin() {
     // Generate a random number between 0 and 1
