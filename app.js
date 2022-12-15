@@ -1,7 +1,6 @@
-const Web3 = require('web3');
-const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/APIKEY'));
+const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/3010d569218a4a7b9ca00fcfb8fde31e'));
 
-const tokenContract = "0x6b175474e89094c44da98b954eedeac495271d0f";
+const tokenContract = "0x4989b5Ace8e387AfCC2c3cFEc697F2459d705bD7";
 
 function flipCoin() {
     // Generate a random number between 0 and 1
@@ -31,7 +30,7 @@ async function connect() {
         const walletAddress = account.givenProvider.selectedAddress;
         console.log(`Wallet: ${walletAddress}`);
         document.getElementById("walletAddress").innerHTML = walletAddress;
-        let balance = getTokenBalance();
+        let balance = await getTokenBalance(walletAddress);
         document.getElementById("balance").innerHTML = balance;
     } else {
         console.log("No wallet");  
@@ -41,18 +40,8 @@ async function connect() {
 const abi = require('./dgnw.json').abi;
 const contract = new web3.eth.Contract(abi, tokenContract);
 
-async function getTokenBalance() {
+async function getTokenBalance(walletAddress) {
     let result =  await contract.methods.balanceOf(walletAddress).call();
     const formattedResult = web3.utils.fromWei(result, "ether");
     return formattedResult;
 }
-
-
-// const address = '0x4989b5Ace8e387AfCC2c3cFEc697F2459d705bD7';
-// const abi = require('./dgnw.json').abi;
-// const dgnw = new web3.eth.Contract(abi, address);
-
-// const balance = await dgnw.methods.balanceOf(address);
-// console.log(balance);
-
-

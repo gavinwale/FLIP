@@ -1,22 +1,24 @@
 <html>
   <head>
 
-    <title>Connect</title>
+    <title>FLIP</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script> 
   </head>
   <body style="background-color: black">
-    <input type="button" class="connectbutton" value="Connect" onclick="connect(); getNetworkChainAndId();">
-      <p id="walletAddress" style="color: white"></p>
+    <div id="smcontainer">
+      <p id="walletAddress" class="normaltext">User:</p>
+      <input type="button" class="connectbutton" value="Connect" onclick="connect();">
       <p id="balance" style="color: white"></p>
-    <!-- <p id="chainId" style="color: white; font-size: 100px"></p> -->
+    </div>
     <h1 class="titleclass">FLIP</h1>
     <p class="instructions">Click 'FLIP' to play!</p>
-    <div class="container">
+    <div class="smcontainer">
         <div class="center">
+            <input type="text" placeholder="Enter bet">
             <button onclick="flipCoin()" class="flipbutton">FLIP</button>
-            <p id="result" style="color: white"></p>
+            <p id="result" class="normaltext" text-align="center"></p>
         </div>
     </div>
   </body>
