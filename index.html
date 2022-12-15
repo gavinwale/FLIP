@@ -16,7 +16,11 @@
     <p class="instructions">Click 'FLIP' to play!</p>
     <div class="smcontainer">
         <div class="center">
-            <input type="text" placeholder="Enter bet">
+            <input type="text" class="inputbox" placeholder="Enter bet">
+            <select name="choice" class="inputbox">
+              <option value="heads">Heads</option>
+              <option value="tails">Tails</option>
+          </select>
             <button onclick="flipCoin()" class="flipbutton">FLIP</button>
             <p id="result" class="normaltext" text-align="center"></p>
         </div>
