@@ -1,6 +1,5 @@
 <html>
   <head>
-
     <title>FLIP</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.4-rc.1/web3.min.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -12,17 +11,26 @@
       <input type="button" class="connectbutton" value="Connect" onclick="connect();">
       <p id="balance" style="color: white"></p>
     </div>
-    <h1 class="titleclass">FLIP</h1>
-    <p class="instructions">Click 'FLIP' to play!</p>
+    <div class="container">
+      <h1 class="titleclass" style="margin-top: 55px">FLIP</h1>
+    </div>
+    <div class="container">
+      <p class="instructions" style="margin-top: 75px">Click 'FLIP' to play!</p>
+    </div>
+    <div class="smcontainer">
+      <img src="https://media.giphy.com/media/V57jUkC3eZFsym7iwE/giphy.gif" width="200"
+       height="200" class="center" style="margin-bottom: 30px" alt="Coin flip gif">
+    </div>"
     <div class="smcontainer">
         <div class="center">
-            <input type="text" class="inputbox" placeholder="Enter bet">
-            <select name="choice" class="inputbox">
+          
+            <input type="text" class="inputbox" placeholder="Enter bet" style="display: inline-block">
+            <select name="choice" class="inputbox" style="display: inline-block">
               <option value="heads">Heads</option>
               <option value="tails">Tails</option>
           </select>
-            <button onclick="flipCoin()" class="flipbutton">FLIP</button>
-            <p id="result" class="normaltext" text-align="center"></p>
+            <button onclick="flipCoin()" class="flipbutton" style="display: inline-block">FLIP</button>
+            <p id="result" class="normaltext" text-align="center" style="display: inline-block"></p>
         </div>
     </div>
   </body>
